@@ -1,10 +1,12 @@
-app.controller('mainController', ['$scope', 'postsFactory', function($scope, postsFactory) {
+app.controller('mainController', ['$scope', 'postsFactory', 'authFactory', function($scope, postsFactory, authFactory) {
 
   console.log('you are in the mainController');
 
   $scope.test = 'The recipe-sharing app for bread-enthusiasts';
 
   $scope.posts = postsFactory.posts;
+
+  $scope.isLoggedIn = authFactory.isLoggedIn;
 
   $scope.addPost = function(){
     if($scope.title === '') {

@@ -1,8 +1,10 @@
-app.controller('postsController', ['$scope', 'postsFactory', 'post', function($scope, postsFactory, post) {
+app.controller('postsController', ['$scope', 'postsFactory', 'authFactory', 'post', function($scope, postsFactory, authFactory, post) {
 
   console.log('you are in the postsController');
 
   $scope.post = post;
+
+  $scope.isLoggedIn = authFactory.isLoggedIn;
 
   $scope.addComment = function(){
     if($scope.body === '') {

@@ -25,6 +25,28 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       }
     })
 
+    .state('register', {
+      url: '/register',
+      templateUrl: '/register.html',
+      controller: 'authController',
+      onEnter: ['$state', 'authFactory', function($state, authFactory){
+        if(authFactory.isLoggedIn()){
+          $state.go('home');
+        }
+      }]
+    })
+
+    .state('login', {
+      url: '/login',
+      templateUrl: '/login.html',
+      controller: 'authController',
+      onEnter: ['$state', 'authFactory', function($state, authFactory){
+        if(authFactory.isLoggedIn()){
+          $state.go('home');
+        }
+      }]
+    })
+
     $urlRouterProvider.otherwise('home');
 
 }]);
