@@ -1,0 +1,25 @@
+.box-btn {
+  background: transparent;
+  color: #4D4E56;
+  cursor: pointer;
+  border-radius: 2px;
+  line-height: 0.5;
+  border: none;
+  outline: none;
+}
+.glyphicon {
+  transition: color .3s linear;
+  font-size: 15px;
+}
+.box-btn .red {
+  color: red;
+}
+body{
+  background-image: url(../images/winter.png);
+}
+a:link {
+    color: #475057;
+}
+a:visited {
+    color: 	#191970;
+}
