@@ -22,4 +22,42 @@ a:link {
 }
 a:visited {
     color: 	#191970;
+
+@font-face {
+    font-family: got;
+    src: url(got.ttf);
+}
+h1.title {
+    font-family: got;
+    text-align:center;
+     font-size:3.5em;
+     color:#000000;
+     letter-spacing: 0px;
+     font-weight:700;
+     text-transform:uppercase;
+     animation:blur 2.00s ease-out infinite;
+     text-shadow:0px 0px 5px #15c5d8,
+     0px 0px 7px #15c5d8;
+}
+
+@keyframes blur{
+ from{
+     text-shadow:0px 0px 10px #15c5d8,
+     0px 0px 10px #15c5d8,
+     0px 0px 10px #15c5d8,
+     0px 0px 25px #15c5d8,
+     0px 0px 25px #15c5d8,
+     0px 0px 25px #15c5d8,
+     0px 0px 25px #15c5d8,
+     0px 0px 25px #15c5d8,
+     0px 0px 50px #15c5d8,
+     0px 0px 50px #15c5d8,
+     0px 0px 50px #7B96B8,
+     0px 0px 150px #7B96B8,
+     0px 10px 100px #7B96B8,
+     0px 10px 100px #7B96B8,
+     0px 10px 100px #7B96B8,
+     0px 10px 100px #7B96B8,
+     0px -10px 100px #7B96B8,
+     0px -10px 100px #7B96B8;}
 }

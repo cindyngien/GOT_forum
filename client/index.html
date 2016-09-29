@@ -11,6 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <!-- Javascripts -->
   <script src='/assets/app.js'></script>
   <script src='/assets/controllers/maincontroller.js'></script>
@@ -51,6 +52,7 @@
       <h1>Game of Thrones Forum</h1>
 
 </button>
+      <h1 class="title">Game of Thrones Forum</h1>
     </div>
     <div ng-repeat="post in posts | orderBy:'-upvotes'">
       <button type="submit" class="box-btn"><span class="glyphicon glyphicon-heart-empty"
@@ -92,6 +94,9 @@
       </div>
       <button type="submit" class="btn btn-primary">Post</button>
     </form>
+    <audio autoplay>
+    <source src="/static/audio/got.mp3" type="audio/mpeg">
+    </audio>
   </script>
 <!-- Posts Template -->
   <script type="text/ng-template" id="/posts.html">
@@ -129,11 +134,12 @@
       </div>
       <button type="submit" class="btn btn-primary">Comment</button>
     </form>
+     <a href="/#home"><button class="btn btn-primary">Go Back</button></a>
   </script>
   <!-- Register Template -->
   <script type="text/ng-template" id="/register.html">
     <div class="page-header">
-      <h1>Game of Thrones Forum</h1>
+      <h1 class="title">Game of Thrones Forum</h1>
     </div>
     <div ng-show="error" class="alert alert-danger row">
       <span>{{ error.message }}</span>
@@ -159,12 +165,12 @@
   <!-- Login Template -->
   <script type="text/ng-template" id="/login.html">
     <div class="page-header">
-      <h1>Game of Thrones Forum</h1>
+      <h1 class="title">Game of Thrones Forum</h1>
     </div>
     <div ng-show="error" class="alert alert-danger row">
       <span>{{ error.message }}</span>
     </div>
-    <form ng-submit="logIn()"
+    <form ng-submit="login()"
       style="margin-top:30px;">
       <h3>Log In</h3>
       <div class="form-group">
