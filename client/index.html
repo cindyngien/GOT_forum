@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Libraries -->
+   <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <style> .glyphicon-thumbs-up { cursor:pointer } </style>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <!-- Javascripts -->
   <script src='/assets/app.js'></script>
   <script src='/assets/controllers/maincontroller.js'></script>
@@ -20,7 +19,6 @@
   <script src='/assets/controllers/navcontroller.js'></script>
   <script src='/assets/factories/postsfactory.js'></script>
   <script src='/assets/factories/authfactory.js'></script>
-  <link href='/static/css/style.css' rel="stylesheet"></script>
   <script>
   $(function($) {
     $(document).on('click', '.box-btn', function(event) {
@@ -48,7 +46,6 @@
 <!-- Home Template -->
   <script type="text/ng-template" id="/home.html">
     <div class="page-header">
-</button>
       <h1 class="title">Game of Thrones Forum</h1>
     </div>
     <div ng-repeat="post in posts | orderBy:'-upvotes'">
