@@ -13,7 +13,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         }]
       }
     })
-
     .state('posts', {
       url: '/posts/{id}',
       templateUrl: '/posts.html',
@@ -24,7 +23,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         }]
       }
     })
-
     .state('register', {
       url: '/register',
       templateUrl: '/register.html',

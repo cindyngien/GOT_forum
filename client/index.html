@@ -8,7 +8,7 @@
   <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <style> .glyphicon-thumbs-up { cursor:pointer } </style>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
   <!-- Javascripts -->
   <script src='/assets/app.js'></script>
   <script src='/assets/controllers/maincontroller.js'></script>
@@ -17,7 +17,7 @@
   <script src='/assets/controllers/navcontroller.js'></script>
   <script src='/assets/factories/postsfactory.js'></script>
   <script src='/assets/factories/authfactory.js'></script>
-  <title>Breddit 2.0</title>
+  <title>Game of Thrones Forum</title>
 </head>
 <body style="margin-left: 20px;">
   <nav class="navbar navbar-default pull-right" ng-controller="navController">
@@ -36,10 +36,10 @@
 <!-- Home Template -->
   <script type="text/ng-template" id="/home.html">
     <div class="page-header">
-      <h1>breddit</h1>
+      <h1>Game of Thrones Forum</h1>
     </div>
     <div ng-repeat="post in posts | orderBy:'-upvotes'">
-      <span class="glyphicon glyphicon-thumbs-up"
+      <span class="glyphicon glyphicon-heart-empty"
         ng-click="incrementUpvotes(post)"></span>
       {{post.upvotes}}
       <span style="font-size:20px; margin-left:10px;">
@@ -93,7 +93,7 @@
       </h3>
     </div>
     <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
-      <span class="glyphicon glyphicon-thumbs-up"
+      <span class="glyphicon glyphicon-heart"
         ng-click="incrementUpvotes(comment)"></span>
       {{comment.upvotes}} - by {{comment.author}}
       <span style="font-size:20px; margin-left:10px;">
@@ -119,7 +119,7 @@
   <!-- Register Template -->
   <script type="text/ng-template" id="/register.html">
     <div class="page-header">
-      <h1>breddit</h1>
+      <h1>Game of Thrones Forum</h1>
     </div>
     <div ng-show="error" class="alert alert-danger row">
       <span>{{ error.message }}</span>
@@ -145,7 +145,7 @@
   <!-- Login Template -->
   <script type="text/ng-template" id="/login.html">
     <div class="page-header">
-      <h1>breddit</h1>
+      <h1>Game of Thrones Forum</h1>
     </div>
     <div ng-show="error" class="alert alert-danger row">
       <span>{{ error.message }}</span>

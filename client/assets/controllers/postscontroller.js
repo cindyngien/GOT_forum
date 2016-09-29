@@ -23,7 +23,7 @@ app.controller('postsController', ['$scope', 'postsFactory', 'authFactory', 'pos
   $scope.incrementUpvotes = function(comment) {
     postsFactory.upvoteComment(post, comment);
     console.log('the comment has been upvoted');
+    // $scope.commentUpvoted = true;
 
   }
-
 }]);

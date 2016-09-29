@@ -24,6 +24,7 @@ app.controller('mainController', ['$scope', 'postsFactory', 'authFactory', funct
   $scope.incrementUpvotes = function(post) {
     postsFactory.upvote(post);
     console.log('the post has been upvoted');
+    // $scope.postUpvoted = true;
   };
 
 }]);
