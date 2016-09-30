@@ -27,7 +27,7 @@
   });
 
 </script>
-  <title>Game of Thrones Forum</title>
+  <title>Game of Thrones</title>
 </head>
 <body style="margin-left: 20px;">
   <nav class="navbar navbar-default pull-right" ng-controller="navController">
@@ -46,7 +46,8 @@
 <!-- Home Template -->
   <script type="text/ng-template" id="/home.html">
     <div class="page-header">
-      <h1 class="title">Game of Thrones Forum</h1>
+      <h1 class="title">Game of Thrones</h1>
+      <h2> a game of thrones subreddit </h2>
     </div>
     <div ng-repeat="post in posts | orderBy:'-upvotes'">
       <button type="submit" class="box-btn"><span class="glyphicon glyphicon-heart-empty"
@@ -94,7 +95,6 @@
   </script>
 <!-- Posts Template -->
   <script type="text/ng-template" id="/posts.html">
-    <h4>This is the posts template</h4>
     <div class="page-header">
       <h3>
         <a ng-show="post.link" href="{{post.link}}">
@@ -106,8 +106,9 @@
       </h3>
     </div>
     <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
-      <span class="glyphicon glyphicon-heart"
-        ng-click="incrementUpvotes(comment)"></span>
+      <button type="submit" class="box-btn"><span class="glyphicon glyphicon-heart-empty"
+        ng-click="incrementUpvotes(comment)" aria-hidden="true"></span></button>
+
       {{comment.upvotes}} - by {{comment.author}}
       <span style="font-size:20px; margin-left:10px;">
         {{comment.body}}
@@ -133,7 +134,7 @@
   <!-- Register Template -->
   <script type="text/ng-template" id="/register.html">
     <div class="page-header">
-      <h1 class="title">Game of Thrones Forum</h1>
+      <h1 class="title">Game of Thrones</h1>
     </div>
     <div ng-show="error" class="alert alert-danger row">
       <span>{{ error.message }}</span>
@@ -159,7 +160,7 @@
   <!-- Login Template -->
   <script type="text/ng-template" id="/login.html">
     <div class="page-header">
-      <h1 class="title">Game of Thrones Forum</h1>
+      <h1 class="title">Game of Thrones</h1>
     </div>
     <div ng-show="error" class="alert alert-danger row">
       <span>{{ error.message }}</span>
